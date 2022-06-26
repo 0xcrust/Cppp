@@ -23,36 +23,43 @@
 // if outer loop terminates without the char = first of letter condition triggering,
 // return false
 
-const char* findx(const char* s, const char* x, int& i) {
-    ++i;
-    /*
-    for(auto c = s; *c!=0; ++c) {
-        std::cout << *c;
-    }*/
-    
-    for(auto c = s; *c!='0'; ++c) {
-        
+const char* findx(const char* s, const char* x) {
+    for(int i = 0; s[i]; ++i) {
+        if(s[i] == x[0]) {
+            const char* possible_occurence = &s[i];
+            int j = 0;
+            
+            while(true) {
+                ++j;
+                if(!x[j]) {
+                    std::cout << "\nfound!";
+                    return possible_occurence;
+                } else if(x[j] != s[i+j]) break;
+            } 
+        }
     }
-
+    std::cout << "\nnot found!";
+    return nullptr;
 }
 
 int main() {
-    int count = 0;
-    const char* c = "indefatigibility0";
+    const char* c = "indefatigibility";
 
-    const char* d = "inde0";
+    const char* d = "inde";
     const char* e = "wrong";
-    const char* f = "fatigibi0";
+    const char* f = "fatigibi";
     const char* g = "gibility";
-    const char* h = "gibility0";
+    const char* h = "frank";
     const char* i = "bili";
+    const char* j = "defi";
 
-    //findx(c, d, count);
-    //findx(c, e, count);
-    //findx(c, f, count);
-    findx(c, g, count);
-    findx(c, h, count);
-    findx(c, i, count);
+    findx(c, d);
+    findx(c, e);
+    findx(c, f);
+    findx(c, g);
+    findx(c, h);
+    findx(c, i);
+    findx(c, j);
 
 }
 
