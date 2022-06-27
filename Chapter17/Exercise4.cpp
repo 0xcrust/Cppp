@@ -2,9 +2,9 @@
  * @file Ex_4.cpp
  * @author Ademola
  * @brief 
- * 4. Write a function, char* strdup(const char*), that copies a C-style string
- *    into memory it allocates on the free store. Do not use any standard library
- *    functions.
+ * Write a function, char* strdup(const char*), that copies a C-style string
+ * into memory it allocates on the free store. Do not use any standard library
+ * functions.
  * @version 0.1
  * @date 2022-06-25
  * 
