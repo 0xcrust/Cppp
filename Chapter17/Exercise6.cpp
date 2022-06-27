@@ -28,12 +28,11 @@ int main() {
     }
     catch(std::exception& e) {
         std::cerr << "Failed with error: " << e.what() << '\n';
-        std::cerr << "Allocated 50,000 chars " << loop_count << " times.\n";
+        std::cerr << "Allocated 500,000 chars " << loop_count << " times.\n";
     }
 }
 
 /*
-I ran this experiment on an hp pavilion 14 and got as far as 1,369,801 loops before
-a crash. Doing the math (multiplied by 500,000 bytes for each allocation), that gives
-684,900,500,000 bytes(684,900,500 kilobytes).
+I ran this experiment on an hp pavilion 14 and got as far as approximately 1,300,000 loops before
+a crash. I have no idea on how to contextualize this information.
 */
