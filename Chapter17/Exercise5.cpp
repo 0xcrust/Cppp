@@ -16,14 +16,14 @@
 const char* findx(const char* s, const char* x) {
     for(int i = 0; s[i]; ++i) {
         if(s[i] == x[0]) {
-            const char* possible_occurence = &s[i];
+            int possible_index = i;
             int j = 0;
             
             while(true) {
                 ++j;
                 if(!x[j]) {
                     std::cout << "\nfound!";
-                    return possible_occurence;
+                    return &s[possible_index];
                 } else if(x[j] != s[i+j]) break;
             } 
         }
@@ -41,7 +41,9 @@ int main() {
     char g[] = "gibility";
     char h[] = "frank";
     char i[] = "bili";
-    char j[] = "defi";
+    char j[] = "defi"; 
+    char k[] = "lityfreestyle";
+
 
     findx(word, d);
     findx(word, e);
@@ -50,6 +52,7 @@ int main() {
     findx(word, h);
     findx(word, i);
     findx(word, j);
+    findx(word, k);
 
 }
 
