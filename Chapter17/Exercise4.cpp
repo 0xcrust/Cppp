@@ -16,8 +16,8 @@
 
 char* strdup(const char* s) {
     int size = 0;
-    for(auto c = s; *c!='0'; ++c){
-        size+=1;
+    for(int i = 0; s[i]; ++i) {
+        ++size;
     }
 
     char* a = new char[size];
@@ -34,8 +34,8 @@ char* strdup(const char* s) {
 }
 
 int main() {
-    const char* c = "rascallion0";
-    const char* d = "test0";
+    char c[] = "rascallion";
+    char d[] = "test";
 
     strdup(c);
     strdup(d);

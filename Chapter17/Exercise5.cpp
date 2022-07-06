@@ -33,23 +33,23 @@ const char* findx(const char* s, const char* x) {
 }
 
 int main() {
-    const char* c = "indefatigibility";
+    char word[] = "indefatigibility";
 
-    const char* d = "inde";
-    const char* e = "wrong";
-    const char* f = "fatigibi";
-    const char* g = "gibility";
-    const char* h = "frank";
-    const char* i = "bili";
-    const char* j = "defi";
+    char d[] = "inde";
+    char e[] = "wrong";
+    char f[] = "fatigibi";
+    char g[] = "gibility";
+    char h[] = "frank";
+    char i[] = "bili";
+    char j[] = "defi";
 
-    findx(c, d);
-    findx(c, e);
-    findx(c, f);
-    findx(c, g);
-    findx(c, h);
-    findx(c, i);
-    findx(c, j);
+    findx(word, d);
+    findx(word, e);
+    findx(word, f);
+    findx(word, g);
+    findx(word, h);
+    findx(word, i);
+    findx(word, j);
 
 }
 
